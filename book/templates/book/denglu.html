@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'book/deng.css' %}">
+</head>
+<body>
+{{mes}}
+    <form action="{% url 'login' %}" method="post">
+         {% csrf_token %}
+    <table border="5" cellpadding="10" cellspacing="0">
+        <tr>
+            <td><p id="ZH" >账号登录</p></td>
+        </tr>
+        <tr>
+                <td><input id="inp" type="text" name="username" autofocus placeholder="请输入账号" required></td>
+        </tr><br>
+        <tr>
+            <td><input id="MM" type="password" name="password" placeholder="请输入登录密码" required></td>
+        </tr>
+        <tr>
+            <th>
+                <input id="DL" type="submit" name="submit" value="登   录">
+            </th><br>
+            <th>
+                <!--target="_blank"表示在新的网页打开链接-->
+                <a href="{% url 'register' %}">
+                    <div align="center">点击注册</div>
+                </a>
+            </th>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.body{
+    margin: 50px auto;
+    width: 75%;
+    height: 1000px;
+    border: 1px solid red;
+    position: relative;
+    background-color: khaki;
+}
+.body_img{
+    width: 60%;
+    height: 400px;
+
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    margin-top: -50px; /*这里是小盒子高的一半*/
+    margin-left: -50px;
+}
+#useraccount{
+    width: 250px;
+    height:30px;
+}
+#password{
+    width: 250px;
+    height:30px;
+}
+#password2{
+    width: 250px;
+    height:30px;
+}
+#DL{
+    width: 180px;
+    height:40px;
+    background-color:#FF8000;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+}
+#Dd{
+    width: 180px;
+    height:40px;
+    background-color:#FF8000;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+}
+#list_4{
+    width: 60%;
+    height: 800px;
+
+    position: absolute;
+    top: 50%;
+    left: 15%
+}

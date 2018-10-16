@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css"  href="{% static 'book/zhuce1.css' %}">
+</head>
+<body>
+
+<table>
+    <div class="body">
+        <div class="body_img">
+           {{mes}}
+            <div id="list_4">
+                <form action="{% url 'register'%}" method="post">
+                    {% csrf_token %}
+                    <div id="list_1"> 账号注册：
+                        <input id="useraccount" name="username" value="" type="input"
+                               maxlength="11">
+                    </div>
+                    <br>
+                    <div id="list_2"> 设置密码：
+                        <input id="password" name="password" maxlength="16" type="password">
+                    </div>
+                    <br>
+                    <div id="list_3"> 确认密码：
+                        <input id="password2" name="password2" maxlength="16" type="password">
+                    </div>
+                    <br>
+                    <br>
+                    <input id="DL" type="submit" name="submit" value="提交注册">
+                </form>
+                <br>
+                <br>
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <input id="Dd" type="submit" name="submit" value="返回登录">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</table>
+
+</body>
+</html>

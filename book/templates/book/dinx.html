@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索书籍</title>
+</head>
+<body>
+        <div align="center">
+            <table border="1" bgcolor="white" style="color: blue">
+                <caption><font size="4" color="red">计算机书籍</font>
+                <a href="{% url 'create' %}">
+                    <div>
+                        <input type="submit" value="增加">
+                    </div>
+                </a>
+                </caption>
+                  <thead>
+                    <tr>
+                        <th>  书名    </th><!--th表示表格中的表头-->
+                        <th>  评分    </th>
+                        <th>  日期    </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                       {% for  line in book444 %}
+                            <tr >
+                                <th>  {{ line.bookName }}  </th><!--th表示表格中的表头-->
+                                <th>  {{ line.bookRate }}  </th>
+                                <th>  {{ line.bookDate|date:"Y-m-d H:m" }}  </th>
+                                <form action="{% url 'delete_post' %}" method="POST"> <!--提交数据要用表单form-->
+                                    {% csrf_token %}
+                                    <th>
+                                    <input type="hidden" name="book_id" value="{{line.id}}"/>  <!-- hidden隐藏-->
+                                    <input type="hidden" name="book_Name" value="{{line.bookName}}"/>  <!-- hidden隐藏-->
+                                    </th>
+                                <th>  <input type="submit" value="删除"> </th>
+                                </form>
+                            </tr>
+                       {% endfor %}
+
+                  </tbody>
+            </table>
+            <br>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="注销">
+            </form>
+        </div>
+</body>
+</html>

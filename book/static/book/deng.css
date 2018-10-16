@@ -1,0 +1,30 @@
+#inp{
+    width: 250px;
+    height:30px;
+}
+#ZH{
+    font-size: 20px;
+    color:red;
+    font-weight: bolder;
+}
+#MM{
+    width: 250px;
+    height:30px;
+}
+#DL{
+    width: 250px;
+    height:40px;
+    background-color:#FF8000;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+}
+a:visited{
+	color: indianred;
+}
+a:hover{
+	color: #0000FF;
+}
+a:active{
+	background-color: #0000FF;
+}

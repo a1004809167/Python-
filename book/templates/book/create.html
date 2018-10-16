@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍搜索</title>
+</head>
+<body>
+{{ name }}
+<br>
+<form action="{% url 'create_post' %}" method="post">
+
+    {% csrf_token %}
+
+    <input type="text" name="book_name" placeholder="请输入书籍名称" required/><br>
+    <input type="text" name="book_rate" placeholder="请输入书籍评分" required/>
+    <input type="submit" value="提交">
+</form>
+<br>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="注销">
+</form>
+<br>
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="查看现有书籍">
+</form>
+</body>
+</html>
